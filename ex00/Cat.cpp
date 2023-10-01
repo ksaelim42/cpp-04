@@ -12,9 +12,8 @@ Cat::Cat() : Animal("Cat"), _breed("Not specified"), _sound("meow Meow"){
 	print_line("Cat constructor called!");
 }
 
-Cat::Cat(const Cat &ref) {
+Cat::Cat(const Cat &ref) : Animal(ref), _breed(ref._breed), _sound(ref._sound){
 	print_line("Cat copy constructor called!");
-	*this = ref;
 }
 
 Cat& Cat::operator=(const Cat &ref) {

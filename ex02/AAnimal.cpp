@@ -1,30 +1,30 @@
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 //*********************************************************************//
 //----------------------- Constuctors & Destructors -------------------//
 //*********************************************************************//
 
-Animal::Animal() : _type("Not specified") {
-	print_line("Animal constructor called!");
+AAnimal::AAnimal(std::string type) : _type(type) {
+	print_line("AAnimal constructor called!");
 }
 
-Animal::Animal(std::string type) : _type(type) {
-	print_line("Animal constructor called!");
+AAnimal::AAnimal() : _type("Not specified") {
+	print_line("AAnimal constructor called!");
 }
 
-Animal::Animal(const Animal &ref) {
+AAnimal::AAnimal(const AAnimal &ref) {
 	this->_type = ref._type;
 }
 
-Animal& Animal::operator=(const Animal &ref) {
+AAnimal& AAnimal::operator=(const AAnimal &ref) {
 	if (this != &ref) {
 		this->_type = ref._type;
 	}
 	return *this;
 }
 
-Animal::~Animal() {
-	print_line("Animal destructor called!");
+AAnimal::~AAnimal() {
+	print_line("AAnimal destructor called!");
 }
 
 
@@ -32,18 +32,19 @@ Animal::~Animal() {
 //----------------------- Puclic main member functions ----------------//
 //*********************************************************************//
 
-void	Animal::makeSound() const {
-	print_line("Animal sound called!");
-}
+// void	AAnimal::makeSound() const {
+// 	print_line("AAnimal sound called!");
+// }
 
 
-void	Animal::makeSound(Animal *ptr) const{
-	ptr->makeSound();
-}
+// void	AAnimal::makeSound(AAnimal *ptr) const{
+// 	ptr->makeSound();
+// }
 
-std::string	Animal::getType() const{
+std::string	AAnimal::getType() const{
 	return this->_type;
 }
+
 
 //*********************************************************************//
 //----------------------- Add on member functions ---------------------//
@@ -57,10 +58,6 @@ void	print_line(std::string s1, std::string s2) {
 	std::cout << s1 << s2 << std::endl;
 }
 
-void	print_line(std::string s1, std::string s2, std::string s3) {
-	std::cout << s1 << s2 << s3 << std::endl;
-}
-
 void	print_line() {
 	std::cout << std::endl;
 }
@@ -72,3 +69,11 @@ void	print(std::string s) {
 void	print(std::string s1, std::string s2) {
 	std::cout << s1 << s2;
 }
+
+
+
+
+
+
+
+

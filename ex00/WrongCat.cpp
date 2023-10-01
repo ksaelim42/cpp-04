@@ -12,7 +12,7 @@ WrongCat::WrongCat() : WrongAnimal("WrongCat"), _breed("Not specified"), _sound(
 	print_line("WrongCat constructor called!");
 }
 
-WrongCat::WrongCat(const WrongCat &ref) : WrongAnimal(ref) {
+WrongCat::WrongCat(const WrongCat &ref) : WrongAnimal(ref), _breed(ref._breed), _sound(ref._sound) {
 	print_line("WrongCat copy constructor called!");
 }
 

@@ -6,12 +6,7 @@ CPPFLAGS = -std=c++98 -Wall -Werror -Wextra
 
 BUILD_DIR = .build
 
-SRCS = main.cpp \
-		Animal.cpp \
-		Dog.cpp \
-		Cat.cpp \
-		WrongAnimal.cpp \
-		WrongCat.cpp
+SRCS = $(wildcard *.cpp)
 
 OBJS = $(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 

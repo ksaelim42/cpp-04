@@ -4,32 +4,30 @@
 
 int main(void)
 {
-	Animal* meta = new Animal();
-	const Animal*	j = new Dog();
-	const Animal*	i = new Cat();
+	// const Animal* j = new Dog();
+	// const Animal* i = new Cat();
+	// delete j;//should not create a leak
+	// delete i;
+	// print_line();
+	// print_line();
 
-	delete	j;
-	delete	i;
-	std::cout << "---------------------------" << std::endl;
-	Animal*	animals[] = {new Dog(), new Cat()};
-
-	for (int i = 0; i < 2; i++)
-		delete animals[i];
-	std::cout << "---------------------------" << std::endl;
-	Dog	dog1;
-	Dog	dog2;
-
-	dog1 = dog2;
+	// const Animal *meta[] = {new Dog(), new Dog(), new Cat(), new Cat()};
+	// print_line();
+	// print_line("======================");
+	// for (int i = 0; i < 4; i++)
+	// {
+	// 	std::cout << meta[i]->getType() << " " << std::endl;
+	// 	meta[i]->makeSound();
+	// 	delete meta[i];
+	// 	print_line();
+	// 	print_line("======================");
+	// }
 	Dog	basic;
+	print_line("====================");
 	{
-		Dog	tmp = basic;
+		Dog tmp = basic;
+	print_line("====================");
 	}
-	std::cout << "---------------------------" << std::endl;
-	Dog	dog1;
-	Dog	dog2;
-
-	dog1 = dog2;
-	dog1.dpAdrBrain();
-	dog2.dpAdrBrain();
+	print_line("====================");
 	return 0;
 }

@@ -13,7 +13,7 @@ WrongAnimal::WrongAnimal() : _type("Not specified") {
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &ref) {
-	*this = ref;
+	this->_type = ref._type;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal &ref) {

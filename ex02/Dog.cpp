@@ -4,17 +4,17 @@
 //----------------------- Constuctors & Destructors -------------------//
 //*********************************************************************//
 
-Dog::Dog(std::string breed) : Animal("Dog"), _breed(breed), _sound("Woof woof") {
+Dog::Dog(std::string breed) : AAnimal("Dog"), _breed(breed), _sound("Woof woof") {
 	print_line(_breed, " Dog constructor called!");
 	this->_brain = new Brain();
 }
 
-Dog::Dog() : Animal("Dog"), _breed("Not specified"), _sound("Woof woof") {
+Dog::Dog() : AAnimal("Dog"), _breed("Not specified"), _sound("Woof woof") {
 	print_line(_breed, " Dog constructor called!");
 	this->_brain = new Brain();
 }
 
-Dog::Dog(const Dog &ref) : Animal(ref), _breed(ref._breed), _sound(ref._sound), _brain(new Brain(*ref._brain)){
+Dog::Dog(const Dog &ref) : AAnimal(ref), _breed(ref._breed), _sound(ref._sound), _brain(new Brain(*ref._brain)) {
 	print_line("Dog copy constructor called!");
 }
 
@@ -42,4 +42,26 @@ Dog::~Dog() {
 void	Dog::makeSound() const {
 	print_line(this->_sound);
 }
+
+//*********************************************************************//
+//----------------------- Puclic Add on member functions --------------//
+//*********************************************************************//
+
+//*********************************************************************//
+//----------------------- Add on member functions ---------------------//
+//*********************************************************************//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
